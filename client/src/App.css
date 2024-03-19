@@ -1,4 +1,144 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&family=Bellefair&family=Chakra+Petch:ital,wght@1,300&family=Oswald:wght@300&family=Oxanium:wght@300&family=Pixelify+Sans&family=Teko:wght@300;400&family=Yatra+One&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
   text-align: center;
-  background-color: midnightblue;
+  background-color: rgb(13, 13, 61);
+}
+
+.Navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+}
+
+.Navbar > .navlogo {
+  font-weight: 700;
+  font-size: 5vh;
+  margin: 5%;
+}
+
+.Navbar > .navitems > a {
+  font-size: 100%;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.Navbar > .navitems > a:hover {
+  opacity: 1;
+}
+
+.Navbar > .navitems > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.45s;
+}
+
+.Navbar > .navitems > a:hover::before {
+  width: 100%;
+}
+
+.navitems {
+  justify-content: center;
+}
+
+.navsignup {
+  margin-right: 10%;
+}
+
+.Navbar > .navtoggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .Navbar > .navitems {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    width: 85%;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all 0.45s;
+  }
+
+  .Navbar > .navitems > a::before {
+    background: transparent;
+  }
+
+  .Navbar > .navitems.open {
+    transform: translateX(0);
+  }
+
+  .Navbar > .navtoggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .navtoggle > .bar {
+    position: relative;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .navtoggle > .bar::before,
+  .navtoggle > .bar::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+
+  .navtoggle > .bar::before {
+    width: 25px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+
+  .navtoggle > .bar::after {
+    width: 32px;
+    transform: translateY(8px);
+  }
+
+  .navtoggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+  }
+
+  .navtoggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+  }
+
+  .navtoggle.open > .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
 }
