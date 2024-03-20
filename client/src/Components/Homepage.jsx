@@ -10,7 +10,7 @@ export default function Homepage() {
             Weatherly!
           </span>
         </h1>
-        <div className="searchFilter">
+        <div className="searchFilter container flex space-x-36">
           <div class="searchBox">
             <input
               className="searchInput"
@@ -89,7 +89,23 @@ export default function Homepage() {
               </svg>
             </button>
           </div>
-          <div className="filter"></div>
+          <div className="filter flex shadow-lg shadow-black px-20">
+            <span className="font-bold font-chakra text-[3.5vh] pt-4">
+              Filters
+            </span>
+            <select name="" id="one">
+              <option value="">Coldest</option>
+              <option value="">Hottest</option>
+            </select>
+            <select name="" id="two">
+              <option value="">10℃ - 20℃</option>
+              <option value=""></option>
+            </select>
+            <select name="" id="three">
+              <option value="">Rainy</option>
+              <option value="">Sunny</option>
+            </select>
+          </div>
         </div>
         <div className="cards">
           <div className="card"></div>
