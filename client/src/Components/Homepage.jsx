@@ -1,17 +1,18 @@
 import React from "react";
+import { FaSearch } from "react-icons/fa";
 
 export default function Homepage() {
   return (
     <div>
       <div className="container">
-        <h1 className="heading text-white font-belle text-[5vh]">
+        <h1 className="heading text-white font-belle text-[5vh] my-10 py-5">
           Seeing the weather of the whole world with{" "}
           <span className="text-[6vh] font-aldrich text-orange-500">
             Weatherly!
           </span>
         </h1>
-        <div className="searchFilter container flex space-x-36">
-          <div class="searchBox">
+        <div className="searchFilter container flex flex-col md:flex-row md:space-x-[25%] mt-2 mb-20 md:mt-3 md:mb-10 md:mx-[10%]">
+          <div class="searchBox shadow-lg shadow-black mx-[23%] md:mx-0 mb-8 md:mb-0">
             <input
               className="searchInput"
               type="text"
@@ -19,98 +20,58 @@ export default function Homepage() {
               placeholder="Search something"
             />
             <button className="searchButton" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="29"
-                height="29"
-                viewBox="0 0 29 29"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_2_17)">
-                  <g filter="url(#filter0_d_2_17)">
-                    <path
-                      d="M23.7953 23.9182L19.0585 19.1814M19.0585 19.1814C19.8188 18.4211 20.4219 17.5185 20.8333 16.5251C21.2448 15.5318 21.4566 14.4671 21.4566 13.3919C21.4566 12.3167 21.2448 11.252 20.8333 10.2587C20.4219 9.2653 19.8188 8.36271 19.0585 7.60242C18.2982 6.84214 17.3956 6.23905 16.4022 5.82759C15.4089 5.41612 14.3442 5.20435 13.269 5.20435C12.1938 5.20435 11.1291 5.41612 10.1358 5.82759C9.1424 6.23905 8.23981 6.84214 7.47953 7.60242C5.94407 9.13789 5.08145 11.2204 5.08145 13.3919C5.08145 15.5634 5.94407 17.6459 7.47953 19.1814C9.01499 20.7168 11.0975 21.5794 13.269 21.5794C15.4405 21.5794 17.523 20.7168 19.0585 19.1814Z"
-                      stroke="white"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      shape-rendering="crispEdges"
-                    ></path>
-                  </g>
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_2_17"
-                    x="-0.418549"
-                    y="3.70435"
-                    width="29.7139"
-                    height="29.7139"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    ></feColorMatrix>
-                    <feOffset dy="4"></feOffset>
-                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                    <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                    ></feColorMatrix>
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_2_17"
-                    ></feBlend>
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_2_17"
-                      result="shape"
-                    ></feBlend>
-                  </filter>
-                  <clipPath id="clip0_2_17">
-                    <rect
-                      width="28.0702"
-                      height="28.0702"
-                      fill="white"
-                      transform="translate(0.403503 0.526367)"
-                    ></rect>
-                  </clipPath>
-                </defs>
-              </svg>
+              <FaSearch className="text-[25px] bg-transparent ml-3" />
             </button>
           </div>
-          <div className="filter flex shadow-lg shadow-black px-20">
-            <span className="font-bold font-chakra text-[3.5vh] pt-4">
+          <div className="filter flex shadow-lg shadow-black md:px-20 mx-[10%] mr-[10%]">
+            <span className="font-bold font-chakra text-[2.5vh] md:text-[3.5vh] py-3 px-3">
               Filters
             </span>
-            <select name="" id="one">
+            <select
+              className="border border-gray-400 rounded-lg my-2 mx-2"
+              name=""
+              id="one"
+            >
               <option value="">Coldest</option>
               <option value="">Hottest</option>
             </select>
-            <select name="" id="two">
+            <select
+              className="border border-gray-400 rounded-lg my-2 mx-2"
+              name=""
+              id="two"
+            >
               <option value="">10℃ - 20℃</option>
               <option value=""></option>
             </select>
-            <select name="" id="three">
+            <select
+              className="border border-gray-400 rounded-lg my-2 mx-2"
+              name=""
+              id="three"
+            >
               <option value="">Rainy</option>
               <option value="">Sunny</option>
             </select>
           </div>
         </div>
-        <div className="cards">
-          <div className="card"></div>
-          <div className="card"></div>
-          <div className="card"></div>
+        <div className="cards flex flex-col md:flex-row">
+          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+            <h1>Tehran 35℃</h1>
+            <p>wind speed : 11km</p>
+            <p>Tuesday : 1952</p>
+            <p>Cloudy</p>
+          </div>
+          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[0%]">
+            <h1>Tehran 35℃</h1>
+            <p>wind speed : 11km</p>
+            <p>Tuesday : 1952</p>
+            <p>Cloudy</p>
+          </div>
+          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+            <h1>Tehran 35℃</h1>
+            <p>wind speed : 11km</p>
+            <p>Tuesday : 1952</p>
+            <p>Cloudy</p>
+          </div>
         </div>
       </div>
     </div>
