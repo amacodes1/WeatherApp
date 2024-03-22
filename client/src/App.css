@@ -164,7 +164,7 @@
   border-radius: 50%;
   background: var(
     --gradient-2,
-    linear-gradient(90deg, #2af598 0%, #009efd 100%)
+    linear-gradient(90deg, #2ba8fc 20%, #fd6900 90%)
   );
   border: 0;
   display: inline-block;

@@ -12,9 +12,9 @@ export default function Homepage() {
           </span>
         </h1>
         <div className="searchFilter container flex flex-col md:flex-row md:space-x-[25%] mt-2 mb-20 md:mt-3 md:mb-10 md:mx-[10%]">
-          <div class="searchBox shadow-lg shadow-black mx-[23%] md:mx-0 mb-8 md:mb-0">
+          <div class="searchBox shadow-lg shadow-black mx-[18%] md:mx-0 mb-8 md:mb-0">
             <input
-              className="searchInput"
+              className="searchInput mr-5 "
               type="text"
               name=""
               placeholder="Search something"
