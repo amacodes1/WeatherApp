@@ -11,7 +11,7 @@ export default function Homepage() {
             Weatherly!
           </span>
         </h1>
-        <div className="searchFilter container flex flex-col md:flex-row md:space-x-[25%] mt-2 mb-20 md:mt-3 md:mb-10 md:mx-[10%]">
+        <div className="searchFilter container flex flex-col md:flex-row md:space-x-[25%] mt-2 mb-20 md:mt-3 md:mb-24 md:mx-[10%]">
           <div class="searchBox shadow-lg shadow-black mx-[18%] md:mx-0 mb-8 md:mb-0">
             <input
               className="searchInput mr-5 "
@@ -54,7 +54,14 @@ export default function Homepage() {
           </div>
         </div>
         <div className="cards flex flex-col md:flex-row">
-          <div className="card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+          <div className="relative card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+            <div>
+              <img
+                className="absolute pb-32 ml-32 w-36 bg-transparent"
+                src="/images/sunwithcloud-bgr.png"
+                alt=""
+              />
+            </div>
             <h1>Tehran 35℃</h1>
             <p>wind speed : 11km</p>
             <p>Tuesday : 1952</p>
