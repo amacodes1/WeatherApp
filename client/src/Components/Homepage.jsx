@@ -54,7 +54,7 @@ export default function Homepage() {
           </div>
         </div>
         <div className="cards flex flex-col md:flex-row">
-          <div className="relative card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+          <div className="relative card box-border border border-gray-400 shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
             <div>
               <img
                 className="absolute pb-32 ml-32 w-36 bg-transparent"
