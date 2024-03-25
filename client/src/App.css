@@ -10,11 +10,12 @@
   box-sizing: border-box;
   color: white;
   text-align: center;
-  background-color: rgb(13, 13, 61);
+  background-color: rgb(8, 8, 39);
 }
 
 .Navbar {
   top: 0;
+  margin-top: 10px;
   width: 100%;
   height: 60px;
   display: flex;

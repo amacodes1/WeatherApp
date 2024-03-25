@@ -23,12 +23,12 @@ export default function Homepage() {
               <FaSearch className="text-[25px] bg-transparent ml-3" />
             </button>
           </div>
-          <div className="filter flex shadow-lg shadow-black md:px-20 mx-[10%] mr-[10%]">
+          <div className="filter relative flex flex-col md:flex-row shadow-lg shadow-black md:px-20 mx-[8%] md:mr-[10%]">
             <span className="font-bold font-chakra text-[2.5vh] md:text-[3.5vh] py-3 px-3">
               Filters
             </span>
             <select
-              className="border border-gray-400 rounded-lg my-2 mx-2"
+              className="border border-gray-400 rounded-lg my-2 mx-3"
               name=""
               id="one"
             >
@@ -36,7 +36,7 @@ export default function Homepage() {
               <option value="">Hottest</option>
             </select>
             <select
-              className="border border-gray-400 rounded-lg my-2 mx-2"
+              className="border border-gray-400 rounded-lg my-2 mx-3"
               name=""
               id="two"
             >
@@ -44,7 +44,7 @@ export default function Homepage() {
               <option value=""></option>
             </select>
             <select
-              className="border border-gray-400 rounded-lg my-2 mx-2"
+              className="border border-gray-400 rounded-lg my-2 mx-3"
               name=""
               id="three"
             >
@@ -54,19 +54,19 @@ export default function Homepage() {
           </div>
         </div>
         <div className="cards flex flex-col md:flex-row">
-          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+          <div className="card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
             <h1>Tehran 35℃</h1>
             <p>wind speed : 11km</p>
             <p>Tuesday : 1952</p>
             <p>Cloudy</p>
           </div>
-          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[0%]">
+          <div className="card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[0%]">
             <h1>Tehran 35℃</h1>
             <p>wind speed : 11km</p>
             <p>Tuesday : 1952</p>
             <p>Cloudy</p>
           </div>
-          <div className="card box-border border shadow-lg shadow-black py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
+          <div className="card box-border shadow-lg shadow-gray-800 py-16 md:py-20 px-[4%] md:px-[6%] mb-16 mx-[20%] md:mx-[10%]">
             <h1>Tehran 35℃</h1>
             <p>wind speed : 11km</p>
             <p>Tuesday : 1952</p>
